@@ -27,7 +27,3 @@ Si quieres cambiar el aspecto o el comportamiento del juego, puedes modificar lo
 - `FRUIT_SIZE`: tamaño de la fruta en píxeles.
 - `SPEED_INCREMENT`: aumento de velocidad después de comer una fruta.
 - `WALLS`: si es `True`, se mostrarán las paredes alrededor de la pantalla; si es `False`, la serpiente aparecerá en el borde opuesto al alcanzar el borde de la pantalla.
-
-## Licencia
-
-Este proyecto está bajo la Licencia MIT. Puedes hacer lo que quieras con él, siempre y cuando menciones al autor original. Consulta el archivo LICENSE para más detalles.
