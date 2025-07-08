@@ -1,29 +1,58 @@
-# SnakeGame
+# Snake Game
 
-Este es un juego clásico de la serpiente programado en Python con la biblioteca Pygame.
+Un clásico Snake modernizado con niveles, puntuación, animaciones de color y controles de pausa y reinicio.
 
-## Cómo jugar
+---
 
-El objetivo del juego es comer la mayor cantidad de frutas posibles sin chocar con las paredes ni con el cuerpo de la serpiente. Las frutas aparecen aleatoriamente en la pantalla y se pueden recoger al tocarlas con la cabeza de la serpiente.
+## Capturas
 
-Para mover la serpiente, usa las flechas del teclado: ↑ (arriba), ↓ (abajo), ← (izquierda) y → (derecha). Si la serpiente alcanza el borde de la pantalla, aparecerá en el borde opuesto.
+![Menú del juego](./doc/menu-snake-game.jpeg)  
 
-Si la serpiente choca con una pared o con su propio cuerpo, el juego termina. En ese caso, aparecerá un mensaje indicando la puntuación obtenida y se reiniciará el juego.
+![Reiniciar juego](./doc/reiniciar-snake-game.jpeg) 
 
-## Cómo ejecutar el juego
+![Juego en acción](./doc/snake-en-accion.jpeg)  
 
-1. Descarga o clona este repositorio en tu ordenador.
-2. Abre una terminal y ve al directorio donde se encuentra el archivo `main.py`.
-3. Asegúrate de tener Python y Pygame instalados en tu ordenador.
-4. Ejecuta el comando `python main.py` para iniciar el juego.
 
-## Personalización
+---
 
-Si quieres cambiar el aspecto o el comportamiento del juego, puedes modificar los siguientes parámetros en el archivo `config.py`:
+## Niveles
 
-- `WIDTH` y `HEIGHT`: tamaño de la pantalla en píxeles.
-- `FPS`: velocidad de actualización de la pantalla en fotogramas por segundo.
-- `SNAKE_SIZE`: tamaño de la serpiente en píxeles.
-- `FRUIT_SIZE`: tamaño de la fruta en píxeles.
-- `SPEED_INCREMENT`: aumento de velocidad después de comer una fruta.
-- `WALLS`: si es `True`, se mostrarán las paredes alrededor de la pantalla; si es `False`, la serpiente aparecerá en el borde opuesto al alcanzar el borde de la pantalla.
+Los niveles muestran tu progreso y pueden influir en la jugabilidad.  
+Cada 5 manzanas, subes un nivel:  
+- Nivel 1: cola de 5 a 9  
+- Nivel 2: cola de 10 a 14  
+- Nivel 3: cola de 15 a 19  
+
+Fórmula interna:
+
+```
+level = Math.floor(tailLength / 5)
+```
+
+---
+
+## Mecánicas por nivel
+
+- Aumentar velocidad:  
+  ```js
+  this.fps = 15 + this.level * 2;
+  this.frameInterval = 1000 / this.fps;
+  ```
+- Introducir obstáculos  
+- Desbloquear skins  
+- Doble puntuación temporal  
+
+---
+
+## Instalación
+
+1. Clona el repositorio  
+2. Abre `snake.html` en tu navegador  
+3. Disfruta y compite por la mejor puntuación
+
+---
+
+## Controles
+
+- Flechas: mover serpiente  
+- P: pausar/reanudar  

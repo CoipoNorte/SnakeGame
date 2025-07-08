@@ -1,16 +1,63 @@
 /* estilos.css */
+
+/* Reset básico */
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
-.centrar-FB {
+
+/* Contenedor centrado de altura total */
+.container {
     display: flex;
     justify-content: center;
     align-items: center;
+    height: 100vh;
+    background: #1d1d1d;
+    position: relative;
 }
-.total {
-    height: 90vh;
+
+/* Canvas con borde sutil */
+canvas {
+    background: #000;
+    border: 2px solid #444;
 }
-body {
-    background: #1D1D1D;
+
+/* Superposiciones de estado */
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(29,29,29, 0.85);
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, sans-serif;
+}
+
+.overlay.hidden {
+    display: none;
+}
+
+.overlay h1,
+.overlay h2 {
+    margin-bottom: 20px;
+}
+
+.overlay button {
+    padding: 10px 20px;
+    background: #28a745;
+    border: none;
+    color: #fff;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.overlay button:hover {
+    background: #218838;
 }

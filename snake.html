@@ -1,19 +1,40 @@
 <!-- snake.html -->
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
+    
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Snake Gmae</title>
+    <title>Snake Game Profesional</title>
     <link rel="stylesheet" href="estilos.css">
+
 </head>
-<body onload="Game()">
-    
-    <div class="centrar-FB total">
-        <canvas id="gc" width="400" height="400"></canvas>
+<body>
+
+    <div class="container">
+        <!-- Canvas donde se pinta el juego -->
+        <canvas id="gameCanvas" width="400" height="400"></canvas>
+
+        <!-- Pantallas de estado -->
+        <div id="startScreen" class="overlay">
+            <h1>Snake Game</h1>
+            <button id="startBtn">Iniciar Juego</button>
+        </div>
+
+        <div id="pauseScreen" class="overlay hidden">
+            <h2>Pausa</h2>
+            <button id="resumeBtn">Continuar</button>
+        </div>
+
+        <div id="gameOverScreen" class="overlay hidden">
+            <h2>Juego Terminado</h2>
+            <p id="finalScore">Puntuación: 0</p>
+            <button id="restartBtn">Reiniciar</button>
+        </div>
     </div>
 
-    <script src="app.js"></script>
+    <script src="app.js" type="module"></script>
+    
 </body>
 </html>
