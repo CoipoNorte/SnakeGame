@@ -1,3 +1,5 @@
+// app.js
+
 function Game() {
     canv = document.getElementById("gc");
     ctx = canv.getContext("2d");
