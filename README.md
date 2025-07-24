@@ -38,17 +38,13 @@ level = Math.floor(tailLength / 5)
   this.fps = 15 + this.level * 2;
   this.frameInterval = 1000 / this.fps;
   ```
-- Introducir obstáculos  
-- Desbloquear skins  
-- Doble puntuación temporal  
 
 ---
 
 ## Instalación
 
 1. Clona el repositorio  
-2. Abre `snake.html` en tu navegador  
-3. Disfruta y compite por la mejor puntuación
+2. Abre `snake.html` en tu navegador
 
 ---
 
